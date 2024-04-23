@@ -32,6 +32,7 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import volkswagen from "./company/volkswagen.png";
 import fannie_mae from "./company/fannie_mae.png";
+import freddie_mac from "./company/freddie_mac.png";
 import gate_gourmet from "./company/gate_gourmet.png";
 import lululemon from "./company/lululemon.png";
 import progressive from "./company/progressive.png";
@@ -40,11 +41,13 @@ import duke_energy from "./company/duke_energy.png";
 import bank_of_america from "./company/bank_of_america.png";
 import capital_one from "./company/capital_one.png";
 import aibestgoods_company from "./company/aibestgoods.png";
+import lesteclinic_company from "./company/lesteclinic.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import aibestgoods from "./aibestgoods.png";
+import lesteclinic from "./lesteclinic.png";
 
 export {
   logo,
@@ -82,7 +85,9 @@ export {
   tripguide,
   volkswagen,
   aibestgoods,
+  lesteclinic,
   aibestgoods_company,
+  lesteclinic_company,
   capital_one,
   bank_of_america,
   ucar,
@@ -90,5 +95,6 @@ export {
   gate_gourmet,
   fannie_mae,
   progressive,
-  lululemon
+  lululemon,
+  freddie_mac
 };

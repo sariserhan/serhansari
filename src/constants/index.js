@@ -25,6 +25,7 @@ import {
     tesla,
     shopify,
     aibestgoods,
+    lesteclinic,
     capital_one,
     bank_of_america,
     duke_energy,
@@ -34,6 +35,7 @@ import {
     fannie_mae,
     volkswagen,
     lululemon,
+    freddie_mac,
     carrent,
     jobit,
     tripguide,
@@ -83,10 +85,10 @@ import {
       name: "GO",
       icon: go,
     },
-    // {
-    //   name: "JavaScript",
-    //   icon: javascript,
-    // },
+    {
+      name: "Nodejs",
+      icon: nodejs,
+    },
     {
       name: "AWS",
       icon: aws,
@@ -260,6 +262,22 @@ import {
         "Wrote python script to update database table from another database table"
       ],
     },
+    {
+      title: "Senior Software Engineer",
+      company_name: "Freddie Mac",
+      icon: freddie_mac,
+      iconBg: "#E6DEDD",
+      date: "November 2023 - February 2024",
+      points: [
+        "Working with Python and OOP concepts to build business logic",
+        "Using Flask to write an API",
+        "Using Celery to que API’s request",
+        "Worked on deploying applications to AWS environment with Jenkins and Terraform",
+        "Wrote unittest and integration test with pytest and unittest",
+        "Worked with SQL database (Postgres) and Snowflake",
+        "Worked with Docker environment"
+      ],
+    },
   ];
 
   const testimonials = [
@@ -290,31 +308,31 @@ import {
   ];
 
   const projects = [
+    // {
+    //   name: "Car Rent",
+    //   description:
+    //     "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    //   tags: [
+    //     {
+    //       name: "react",
+    //       color: "blue-text-gradient",
+    //     },
+    //     {
+    //       name: "mongodb",
+    //       color: "green-text-gradient",
+    //     },
+    //     {
+    //       name: "tailwind",
+    //       color: "pink-text-gradient",
+    //     },
+    //   ],
+    //   image: carrent,
+    //   source_code_link: "https://github.com/",
+    // },
     {
-      name: "Car Rent",
+      name: "Ai BestGoods",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "AI-BESTGOODS",
-      description:
-        "Web application that recommends users to best products in each category with AI. Compare products and let users ask AI's advice",
+        "Compare products and get AI's advice",
       tags: [
         {
           name: "python",
@@ -330,28 +348,30 @@ import {
         },
       ],
       image: aibestgoods,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/sariserhan/affiliate",
+      website_link: "https://aibestgoods.com/",
     },
     {
-      name: "Trip Guide",
+      name: "Leste Clinic",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "Where transformative beauty meets unparalleled expertise",
       tags: [
         {
           name: "nextjs",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "prisma",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "tailwind",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: lesteclinic,
+      source_code_link: "https://github.com/sariserhan/lesteclinic",
+      website_link: "https://lesteclinic.com/",
     },
   ];
 

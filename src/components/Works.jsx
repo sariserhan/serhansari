@@ -1,4 +1,3 @@
-import React from "react";
 import { Tilt}  from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -7,6 +6,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { FiExternalLink } from "react-icons/fi";
 
 const ProjectCard = ({
   index,
@@ -15,6 +15,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  website_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -48,7 +49,10 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
+        <div className='mt-5 flex gap-2 items-center '>
+          <a className="font-bold text-[24px] text-blue-500 hover:text-blue-700 visited:text-purple-500" href={website_link}>{name}</a>
+          <FiExternalLink />
+        </div>
           <p className='mt-2 text-secondary text-[14px]'>{description}</p>
         </div>
 
