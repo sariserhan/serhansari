@@ -47,7 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a software engineer with experience in Python, AWS, React and more...
+        I'm a software engineer with experience in Python, AWS, React, React Native, Swift and more...
         I collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve read-world problems.
         Let's work together to bring your ideas to life!
       </motion.p>

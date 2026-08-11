@@ -16,6 +16,8 @@ import {
     aws,
     nodejs,
     mongodb,
+    reactnative,
+    swift,
     git,
     figma,
     docker,
@@ -40,6 +42,15 @@ import {
     jobit,
     tripguide,
     threejs,
+    alwaysdraw,
+    aurowall,
+    localwall,
+    noout,
+    swornin,
+    quickvars,
+    sealmove,
+    planetnodes,
+    commandcenter,
   } from "../assets";
 
   export const navLinks = [
@@ -74,6 +85,10 @@ import {
       title: "DevOps Engineer",
       icon: creator,
     },
+    {
+      title: "Mobile Developer",
+      icon: reactnative,
+    },
   ];
 
   const technologies = [
@@ -96,6 +111,14 @@ import {
     {
       name: "React JS",
       icon: reactjs,
+    },
+    {
+      name: "React Native",
+      icon: reactnative,
+    },
+    {
+      name: "Swift",
+      icon: swift,
     },
     {
       name: "HTML 5",
@@ -372,6 +395,123 @@ import {
       image: lesteclinic,
       source_code_link: "https://github.com/sariserhan/lesteclinic",
       website_link: "https://lesteclinic.com/",
+    },
+    {
+      name: "AlwaysDraw",
+      description:
+        "One shared canvas the whole internet draws on, live, forever",
+      tags: [
+        { name: "nextjs", color: "blue-text-gradient" },
+        { name: "convex", color: "green-text-gradient" },
+        { name: "tailwind", color: "pink-text-gradient" },
+      ],
+      image: alwaysdraw,
+      source_code_link: "https://github.com/sariserhan/alwaysdraw",
+      website_link: "https://alwaysdraw.com/",
+    },
+    {
+      name: "Aurowall",
+      description:
+        "Turn any screen into a cozy, mood-matched ambient display",
+      tags: [
+        { name: "nextjs", color: "blue-text-gradient" },
+        { name: "postgres", color: "green-text-gradient" },
+        { name: "stripe", color: "pink-text-gradient" },
+      ],
+      image: aurowall,
+      source_code_link: "https://github.com/sariserhan/aurowall",
+      website_link: "https://aurowall.com/",
+    },
+    {
+      name: "LocalWall",
+      description:
+        "A digital corkboard where locals post and browse ads on their city's wall",
+      tags: [
+        { name: "nextjs", color: "blue-text-gradient" },
+        { name: "convex", color: "green-text-gradient" },
+        { name: "clerk", color: "pink-text-gradient" },
+      ],
+      image: localwall,
+      source_code_link: "https://github.com/sariserhan/localwall",
+      website_link: "https://localwall.app/",
+    },
+    {
+      name: "NoOut",
+      description:
+        "Randomly checks you're still disciplined — miss it and it locks your distracting apps",
+      tags: [
+        { name: "expo", color: "blue-text-gradient" },
+        { name: "convex", color: "green-text-gradient" },
+        { name: "swift", color: "pink-text-gradient" },
+      ],
+      image: noout,
+      source_code_link: "https://github.com/sariserhan/noout",
+      website_link: "https://noout.app/",
+    },
+    {
+      name: "SwornIn",
+      description:
+        "Swear a promise, stake your apps, and let your phone lock them if you break it",
+      tags: [
+        { name: "expo", color: "blue-text-gradient" },
+        { name: "typescript", color: "green-text-gradient" },
+        { name: "convex", color: "pink-text-gradient" },
+      ],
+      image: swornin,
+      source_code_link: "https://github.com/sariserhan/swornin",
+      website_link: "https://noout.app/swornin",
+    },
+    {
+      name: "QuickVars",
+      description:
+        "Passwords, PINs, and codes locked behind Face ID, never in the cloud",
+      tags: [
+        { name: "swiftui", color: "blue-text-gradient" },
+        { name: "cryptokit", color: "green-text-gradient" },
+        { name: "faceid", color: "pink-text-gradient" },
+      ],
+      image: quickvars,
+      source_code_link: "https://github.com/sariserhan/quickvars",
+      website_link: "https://noout.app/quickvars",
+    },
+    {
+      name: "SealMove",
+      description:
+        "Turn a phone walkthrough into tamper-proof, court-ready move-in evidence",
+      tags: [
+        { name: "swift", color: "blue-text-gradient" },
+        { name: "cloudflare", color: "green-text-gradient" },
+        { name: "typescript", color: "pink-text-gradient" },
+      ],
+      image: sealmove,
+      source_code_link: "https://gitlab.com/sariserhan/sealmove",
+      website_link: "https://sealmove.com/",
+    },
+    {
+      name: "PlanetNodes",
+      description:
+        "A marketplace to rent out idle computers or access cheap distributed compute",
+      tags: [
+        { name: "nextjs", color: "blue-text-gradient" },
+        { name: "fastapi", color: "green-text-gradient" },
+        { name: "stripe", color: "pink-text-gradient" },
+      ],
+      image: planetnodes,
+      source_code_link: "https://github.com/sariserhan/planetnode",
+      website_link: "https://planetnodes.com/",
+    },
+    {
+      name: "Command Center",
+      description:
+        "One dashboard to manage every product from a single control panel",
+      tags: [
+        { name: "react", color: "blue-text-gradient" },
+        { name: "vite", color: "green-text-gradient" },
+        { name: "clerk", color: "pink-text-gradient" },
+      ],
+      image: commandcenter,
+      source_code_link: "https://github.com/sariserhan/command-center",
+      website_link: "https://command-center.cloud/",
     },
   ];
 

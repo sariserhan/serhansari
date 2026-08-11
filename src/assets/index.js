@@ -25,6 +25,8 @@ import aws from "./tech/aws.png";
 import go from "./tech/go.png";
 import postgres from "./tech/postgres.png";
 import terraform from "./tech/terraform.png";
+import reactnative from "./tech/reactnative.svg";
+import swift from "./tech/swift.svg";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -48,6 +50,15 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import aibestgoods from "./aibestgoods.png";
 import lesteclinic from "./lesteclinic.png";
+import alwaysdraw from "./alwaysdraw.png";
+import aurowall from "./aurowall.png";
+import localwall from "./localwall.png";
+import noout from "./noout.png";
+import swornin from "./swornin.png";
+import quickvars from "./quickvars.png";
+import sealmove from "./sealmove.png";
+import planetnodes from "./planetnodes.png";
+import commandcenter from "./commandcenter.png";
 
 export {
   logo,
@@ -72,6 +83,8 @@ export {
   go,
   postgres,
   aws,
+  reactnative,
+  swift,
   tailwind,
   typescript,
   threejs,
@@ -86,6 +99,15 @@ export {
   volkswagen,
   aibestgoods,
   lesteclinic,
+  alwaysdraw,
+  aurowall,
+  localwall,
+  noout,
+  swornin,
+  quickvars,
+  sealmove,
+  planetnodes,
+  commandcenter,
   aibestgoods_company,
   lesteclinic_company,
   capital_one,
