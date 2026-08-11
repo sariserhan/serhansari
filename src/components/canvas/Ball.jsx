@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -38,19 +38,39 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
-  return (
-    <Canvas
-      frameloop='demand'
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
-      </Suspense>
+  const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-      <Preload all />
-    </Canvas>
+  useEffect(() => {
+    // ponytail: 16 tech icons + hero/earth canvases exceed the browser's
+    // WebGL context limit. Mount each Canvas only while it's near the
+    // viewport, and unmount it again once scrolled away, so the number of
+    // live contexts stays bounded no matter how far the page is scrolled.
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { rootMargin: "200px" }
+    );
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={containerRef} className="w-full h-full">
+      {isVisible && (
+        <Canvas
+          frameloop='demand'
+          dpr={[1, 2]}
+          gl={{ preserveDrawingBuffer: true }}
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls enableZoom={false} />
+            <Ball imgUrl={icon} />
+          </Suspense>
+
+          <Preload all />
+        </Canvas>
+      )}
+    </div>
   );
 };
 

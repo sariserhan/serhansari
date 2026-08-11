@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
@@ -32,6 +32,20 @@ const Computers = ({isMobile}) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    // ponytail: release this canvas's WebGL context once scrolled well out
+    // of view, so it doesn't permanently eat one of the browser's limited
+    // concurrent-context slots for the rest of the page (see Ball.jsx).
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { rootMargin: "200px" }
+    );
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -54,22 +68,26 @@ const ComputersCanvas = () => {
     }
   }, [])
   return (
-    <Canvas
-      frameloop="demand"
-      shadows
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-      >
-        <Suspense fallback={<CanvasLoader />}>
-            <OrbitControls
-              enableZoom={false}
-              maxPolarAngle={Math.PI / 2}
-              minPolarAngle={Math.PI / 2}
-            />
-            <Computers isMobile={isMobile}/>
-          </Suspense>
-        <Preload all />
-      </Canvas>
+    <div ref={containerRef} className="w-full h-full">
+      {isVisible && (
+        <Canvas
+          frameloop="demand"
+          shadows
+          camera={{ position: [20, 3, 5], fov: 25 }}
+          gl={{ preserveDrawingBuffer: true }}
+          >
+            <Suspense fallback={<CanvasLoader />}>
+                <OrbitControls
+                  enableZoom={false}
+                  maxPolarAngle={Math.PI / 2}
+                  minPolarAngle={Math.PI / 2}
+                />
+                <Computers isMobile={isMobile}/>
+              </Suspense>
+            <Preload all />
+          </Canvas>
+      )}
+    </div>
   )
 }
 
